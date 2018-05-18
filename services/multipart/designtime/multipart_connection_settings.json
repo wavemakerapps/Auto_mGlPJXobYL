@@ -1,0 +1,39 @@
+{
+  "endpointAddress" : "http://wavemaker.productionvm.com/run-46r8pzy3rj/Auto_mGlPJXobYL/services/multipartDB/Blobdata",
+  "method" : "POST",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : { },
+  "authDetails" : null,
+  "contentType" : "multipart/form-data",
+  "multiParamInfoList" : [ {
+    "type" : "FILE",
+    "name" : "blobcol",
+    "list" : true,
+    "testValue" : null,
+    "contentType" : null
+  }, {
+    "type" : "STRING",
+    "name" : "wm_data_json",
+    "list" : false,
+    "testValue" : "{\"info\":\"wmlogo\"}",
+    "contentType" : "application/json"
+  } ],
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "X-XSS-Protection" : [ "1; mode=block" ],
+      "Content-Security-Policy" : [ "frame-ancestors 'self'" ],
+      "X-Content-Type-Options" : [ "nosniff" ],
+      "Content-Type" : [ "application/json;charset=UTF-8" ],
+      "Transfer-Encoding" : [ "chunked" ],
+      "Vary" : [ "Accept-Encoding" ],
+      "Date" : [ "Wed, 16 May 2018 15:02:07 GMT" ],
+      "Connection" : [ "keep-alive" ]
+    },
+    "responseBody" : "{\"id\":2,\"info\":\"wmlogo\",\"blobcol\":\"\"}",
+    "convertedResponse" : null
+  },
+  "proxy" : null
+}

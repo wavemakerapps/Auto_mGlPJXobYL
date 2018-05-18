@@ -1,0 +1,80 @@
+{
+  "basePath" : "${rest.multipart.basepath}",
+  "paths" : {
+    "/Auto_mGlPJXobYL/services/multipartDB/Blobdata" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "multipart_RestServiceVirtualController-invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-EDITABLE" : true,
+          "in" : "formData",
+          "name" : "blobcol",
+          "type" : "array",
+          "items" : {
+            "type" : "file"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "org.springframework.web.multipart.MultipartFile",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : true,
+          "in" : "formData",
+          "name" : "wm_data_json",
+          "x-WM-CONTENT_TYPE" : "application/json",
+          "type" : "string",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "required" : false
+        } ],
+        "tags" : [ "RestServiceVirtualController" ],
+        "consumes" : [ "multipart/form-data" ]
+      },
+      "x-WM-BASE_PATH" : "/Auto_mGlPJXobYL/services/multipartDB/Blobdata",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.multipart.scheme}://${rest.multipart.host}${rest.multipart.basepath}/Auto_mGlPJXobYL/services/multipartDB/Blobdata"
+    }
+  },
+  "host" : "${rest.multipart.host}",
+  "schemes" : [ "${rest.multipart.scheme}" ],
+  "definitions" : {
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "multipart.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "blobcol", "id", "info" ],
+      "properties" : {
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "blobcol" : {
+          "type" : "string"
+        },
+        "info" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "ab514270-6475-462f-a0c8-70d37320b2a7",
+    "x-WM-SERVICE_ID" : "productionvm",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ]
+}

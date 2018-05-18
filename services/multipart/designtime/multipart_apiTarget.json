@@ -1,0 +1,80 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "ab514270-6475-462f-a0c8-70d37320b2a7",
+    "x-WM-SERVICE_ID" : "productionvm",
+    "x-WM-SERVICE_TYPE" : "RestService"
+  },
+  "host" : "wavemaker.productionvm.com",
+  "basePath" : "/run-46r8pzy3rj",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/Auto_mGlPJXobYL/services/multipartDB/Blobdata" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "multipart_RestServiceVirtualController-invoke",
+        "consumes" : [ "multipart/form-data" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "blobcol",
+          "in" : "formData",
+          "required" : false,
+          "type" : "array",
+          "items" : {
+            "type" : "file"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "org.springframework.web.multipart.MultipartFile"
+        }, {
+          "name" : "wm_data_json",
+          "in" : "formData",
+          "required" : false,
+          "type" : "string",
+          "x-WM-EDITABLE" : true,
+          "x-WM-CONTENT_TYPE" : "application/json",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/Auto_mGlPJXobYL/services/multipartDB/Blobdata",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${rest.multipart.scheme}://${rest.multipart.host}${rest.multipart.basepath}/Auto_mGlPJXobYL/services/multipartDB/Blobdata"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "blobcol", "id", "info" ],
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "blobcol" : {
+          "type" : "string"
+        },
+        "info" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "multipart.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

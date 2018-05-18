@@ -1,1 +1,105 @@
-{ }
+{
+  "MultipartDBBlobdataData" : {
+    "_id" : "wm-MultipartDBBlobdataData-wm.LiveVariable-1526482991328",
+    "name" : "MultipartDBBlobdataData",
+    "owner" : "Page",
+    "category" : "wm.LiveVariable",
+    "dataBinding" : [ ],
+    "operation" : "read",
+    "dataSet" : [ ],
+    "type" : "Blobdata",
+    "isList" : true,
+    "saveInPhonegap" : false,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "inFlightBehavior" : "executeLast",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "transformationRequired" : false,
+    "liveSource" : "multipartDB",
+    "ignoreCase" : true,
+    "matchMode" : "start",
+    "orderBy" : "id asc",
+    "propertiesMap" : {
+      "columns" : [ {
+        "fieldName" : "id",
+        "type" : "integer",
+        "fullyQualifiedType" : "integer",
+        "columnName" : "ID",
+        "isPrimaryKey" : true,
+        "notNull" : true,
+        "length" : 0,
+        "precision" : 10,
+        "generator" : "identity",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "info",
+        "type" : "string",
+        "fullyQualifiedType" : "string",
+        "columnName" : "info",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : 255,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      }, {
+        "fieldName" : "blobcol",
+        "type" : "blob",
+        "fullyQualifiedType" : "blob",
+        "columnName" : "blobcol",
+        "isPrimaryKey" : false,
+        "notNull" : false,
+        "length" : -1,
+        "precision" : 0,
+        "generator" : "assigned",
+        "isRelated" : false,
+        "scale" : 0
+      } ],
+      "entityName" : "Blobdata",
+      "fullyQualifiedName" : "com.auto_mglpjxobyl.multipartdb.Blobdata",
+      "tableType" : "TABLE",
+      "primaryFields" : [ "id" ]
+    },
+    "isDefault" : true,
+    "bindCount" : 1,
+    "tableName" : "blobdata",
+    "tableType" : "TABLE",
+    "properties" : [ ],
+    "relatedTables" : [ ],
+    "package" : "com.auto_mglpjxobyl.multipartdb.Blobdata"
+  },
+  "MultipartInvoke" : {
+    "_id" : "wm-MultipartInvoke-wm.ServiceVariable-1526483038944",
+    "name" : "MultipartInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "isList" : true,
+      "target" : "blobcol",
+      "value" : "bind:Widgets.fileupload1.selectedFiles",
+      "type" : "file"
+    }, {
+      "target" : "wm_data_json",
+      "value" : "{\"info\":\"mobile\"}",
+      "type" : "string"
+    } ],
+    "type" : "multipart.RootResponse",
+    "service" : "multipart",
+    "operation" : "invoke",
+    "operationId" : "multipart_RestServiceVirtualController-invoke",
+    "operationType" : "post",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

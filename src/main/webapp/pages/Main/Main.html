@@ -3,7 +3,17 @@
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="8" name="mainContent" padding="unset 15px">
+            <wm-table name="BlobdataTable1" title="Blobdata List" dataset="bind:Variables.MultipartDBBlobdataData.dataSet" navigation="Basic">
+                <wm-table-column binding="id" caption="Id" generator="identity" pcdisplay="true" mobiledisplay="true" type="integer" primary-key="true" readonly="true"></wm-table-column>
+                <wm-table-column binding="info" caption="Info" generator="assigned" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                <wm-table-column binding="blobcol" widget-type="image" caption="Blobcol" generator="assigned" pcdisplay="true" mobiledisplay="true" type="blob">
+                    <wm-picture ng-if="columnValue != null" width="48px" picturesource="{{columnValue}}" class="" data-ng-class=""></wm-picture>
+                </wm-table-column>
+            </wm-table>
+            <wm-fileupload name="fileupload1" service="FileService" operation="uploadFile" mode="Select"></wm-fileupload>
+            <wm-label padding="unset 0.5em" name="label1" caption="bind:Variables.MultipartInvoke.dataSet"></wm-label>
+            <wm-button class="btn-default" caption="Button" type="button" margin="unset 0.5em" name="button1" on-click="Variables.MultipartInvoke.invoke()"></wm-button>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
